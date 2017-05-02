@@ -18,10 +18,10 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
     @IBOutlet weak var submit: UIButton!
     @IBOutlet weak var latitude: UILabel!
     @IBOutlet weak var longitude: UILabel!
-    /*@IBOutlet weak var tableView: UITableView!
+    //@IBOutlet weak var tableView: UITableView!
     
     var centralManager: CBCentralManager?
-    var peripherals = Array<CBPeripheral>()*/
+    var peripherals = Array<CBPeripheral>()
     
     var locationManager: CLLocationManager!
     
@@ -29,7 +29,7 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        //centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
+        centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
         submit.isEnabled = false
         //print("View did load")
         
@@ -242,35 +242,25 @@ extension ViewController : ORKTaskViewControllerDelegate {
 
 }
 
-/*extension ViewController: CBCentralManagerDelegate {
+extension ViewController: CBCentralManagerDelegate {
+
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if (central.state == .poweredOn){
+            print("Scanning for peripherals")
             self.centralManager?.scanForPeripherals(withServices: nil, options: nil)
         }
         else {
-            // do something like alert the user that ble is not on
+            print("BLE not enabled")
         }
     }
     
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String : Any], rssi RSSI: NSNumber) {
-        peripherals.append(peripheral)
-        tableView.reloadData()
+        if (peripheral.name != nil) {
+            print("Peripheral discovered")
+            print(peripheral.name! as Any)
+            peripherals.append(peripheral)
+        }
     }
 }
-
-extension ViewController: UITableViewDataSource {
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell:UITableViewCell = self.tableView.dequeueReusableCell(withIdentifier: "cell")! as UITableViewCell
-        
-        let peripheral = peripherals[indexPath.row]
-        cell.textLabel?.text = peripheral.name
-        
-        return cell
-    }
-    
-    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return peripherals.count
-    }
-}*/
 
 
