@@ -14,12 +14,14 @@ import CoreBluetooth
 
 class ViewController: UIViewController, CLLocationManagerDelegate {
     
+    @IBOutlet weak var survey: UIButton!
+    @IBOutlet weak var submit: UIButton!
     @IBOutlet weak var latitude: UILabel!
     @IBOutlet weak var longitude: UILabel!
-    @IBOutlet weak var tableView: UITableView!
+    /*@IBOutlet weak var tableView: UITableView!
     
     var centralManager: CBCentralManager?
-    var peripherals = Array<CBPeripheral>()
+    var peripherals = Array<CBPeripheral>()*/
     
     var locationManager: CLLocationManager!
     
@@ -27,7 +29,8 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
+        //centralManager = CBCentralManager(delegate: self, queue: DispatchQueue.main)
+        submit.isEnabled = false
         //print("View did load")
         
     }
@@ -95,6 +98,9 @@ class ViewController: UIViewController, CLLocationManagerDelegate {
 extension ViewController : ORKTaskViewControllerDelegate {
     func taskViewController(_ taskViewController: ORKTaskViewController, didFinishWith reason: ORKTaskViewControllerFinishReason, error: Error?) {
         //Handle results with taskViewController.result
+        submit.isEnabled = true
+        survey.isEnabled = false
+        
         if (taskViewController.task?.identifier == "SurveyTask" && reason == .completed) {
             print("Starting results")
             
@@ -220,6 +226,7 @@ extension ViewController : ORKTaskViewControllerDelegate {
         }
     
     @IBAction func submitTapped(sender : AnyObject) {
+        submit.isEnabled = false
         var readString = "" // Used to store the file contents
         let fileName = "Survey"
         let DocumentDirURL = try! FileManager.default.url(for: .documentDirectory, in: .userDomainMask, appropriateFor: nil, create: true)
@@ -235,13 +242,13 @@ extension ViewController : ORKTaskViewControllerDelegate {
 
 }
 
-extension ViewController: CBCentralManagerDelegate {
+/*extension ViewController: CBCentralManagerDelegate {
     func centralManagerDidUpdateState(_ central: CBCentralManager) {
         if (central.state == .poweredOn){
             self.centralManager?.scanForPeripherals(withServices: nil, options: nil)
         }
         else {
-            print("BLE is not turned on!")
+            // do something like alert the user that ble is not on
         }
     }
     
@@ -264,6 +271,6 @@ extension ViewController: UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return peripherals.count
     }
-}
+}*/
 
 
