@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BF52F3441EB0144A0037A787 /* ResultParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52F3431EB0144A0037A787 /* ResultParser.swift */; };
+		BF54AABC1EB138C700475095 /* ResearchKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF54AABB1EB138C700475095 /* ResearchKit.framework */; };
+		BF54AABD1EB138C700475095 /* ResearchKit.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = BF54AABB1EB138C700475095 /* ResearchKit.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		BF675DC81EAFB0AA00FAFF26 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF675DC71EAFB0AA00FAFF26 /* AppDelegate.swift */; };
 		BF675DCA1EAFB0AA00FAFF26 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF675DC91EAFB0AA00FAFF26 /* ViewController.swift */; };
 		BF675DCD1EAFB0AA00FAFF26 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF675DCB1EAFB0AA00FAFF26 /* Main.storyboard */; };
@@ -14,6 +17,10 @@
 		BF675DD21EAFB0AA00FAFF26 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF675DD01EAFB0AA00FAFF26 /* LaunchScreen.storyboard */; };
 		BF675DDD1EAFB0AB00FAFF26 /* WhySitTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF675DDC1EAFB0AB00FAFF26 /* WhySitTests.swift */; };
 		BF675DE81EAFB0AB00FAFF26 /* WhySitUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF675DE71EAFB0AB00FAFF26 /* WhySitUITests.swift */; };
+		BF675E051EAFB1F700FAFF26 /* SurveyTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF675E041EAFB1F700FAFF26 /* SurveyTask.swift */; };
+		BF675E071EAFBE2F00FAFF26 /* ConsentDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF675E061EAFBE2F00FAFF26 /* ConsentDocument.swift */; };
+		BF675E091EAFBE9B00FAFF26 /* ConsentTask.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF675E081EAFBE9B00FAFF26 /* ConsentTask.swift */; };
+		BFA604AA1EB9059D00143EE5 /* CoreBluetooth.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFA604A91EB9059D00143EE5 /* CoreBluetooth.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -31,9 +38,40 @@
 			remoteGlobalIDString = BF675DC31EAFB0AA00FAFF26;
 			remoteInfo = WhySit;
 		};
+		BFA402FE1EB276690064DAF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF54AAA81EB122B800475095 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = B183A5951A8535D100C76870;
+			remoteInfo = ResearchKit;
+		};
+		BFA403001EB276690064DAF8 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BF54AAA81EB122B800475095 /* ResearchKit.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 86CC8E9A1AC09332001CCD89;
+			remoteInfo = ResearchKitTests;
+		};
 /* End PBXContainerItemProxy section */
 
+/* Begin PBXCopyFilesBuildPhase section */
+		BF675E031EAFB10200FAFF26 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				BF54AABD1EB138C700475095 /* ResearchKit.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
 /* Begin PBXFileReference section */
+		BF52F3431EB0144A0037A787 /* ResultParser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultParser.swift; sourceTree = "<group>"; };
+		BF54AAA81EB122B800475095 /* ResearchKit.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = ResearchKit.xcodeproj; path = "../ResearchKit-master/ResearchKit.xcodeproj"; sourceTree = "<group>"; };
+		BF54AABB1EB138C700475095 /* ResearchKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = ResearchKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF675DC41EAFB0AA00FAFF26 /* WhySit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WhySit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF675DC71EAFB0AA00FAFF26 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BF675DC91EAFB0AA00FAFF26 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -47,6 +85,10 @@
 		BF675DE31EAFB0AB00FAFF26 /* WhySitUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WhySitUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		BF675DE71EAFB0AB00FAFF26 /* WhySitUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhySitUITests.swift; sourceTree = "<group>"; };
 		BF675DE91EAFB0AB00FAFF26 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		BF675E041EAFB1F700FAFF26 /* SurveyTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SurveyTask.swift; sourceTree = "<group>"; };
+		BF675E061EAFBE2F00FAFF26 /* ConsentDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentDocument.swift; sourceTree = "<group>"; };
+		BF675E081EAFBE9B00FAFF26 /* ConsentTask.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConsentTask.swift; sourceTree = "<group>"; };
+		BFA604A91EB9059D00143EE5 /* CoreBluetooth.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreBluetooth.framework; path = System/Library/Frameworks/CoreBluetooth.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +96,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BFA604AA1EB9059D00143EE5 /* CoreBluetooth.framework in Frameworks */,
+				BF54AABC1EB138C700475095 /* ResearchKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -77,10 +121,13 @@
 		BF675DBB1EAFB0AA00FAFF26 = {
 			isa = PBXGroup;
 			children = (
+				BF54AABB1EB138C700475095 /* ResearchKit.framework */,
+				BF54AAA81EB122B800475095 /* ResearchKit.xcodeproj */,
 				BF675DC61EAFB0AA00FAFF26 /* WhySit */,
 				BF675DDB1EAFB0AB00FAFF26 /* WhySitTests */,
 				BF675DE61EAFB0AB00FAFF26 /* WhySitUITests */,
 				BF675DC51EAFB0AA00FAFF26 /* Products */,
+				BFA604A81EB9059C00143EE5 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,6 +146,10 @@
 			children = (
 				BF675DC71EAFB0AA00FAFF26 /* AppDelegate.swift */,
 				BF675DC91EAFB0AA00FAFF26 /* ViewController.swift */,
+				BF675E041EAFB1F700FAFF26 /* SurveyTask.swift */,
+				BF675E061EAFBE2F00FAFF26 /* ConsentDocument.swift */,
+				BF52F3431EB0144A0037A787 /* ResultParser.swift */,
+				BF675E081EAFBE9B00FAFF26 /* ConsentTask.swift */,
 				BF675DCB1EAFB0AA00FAFF26 /* Main.storyboard */,
 				BF675DCE1EAFB0AA00FAFF26 /* Assets.xcassets */,
 				BF675DD01EAFB0AA00FAFF26 /* LaunchScreen.storyboard */,
@@ -125,6 +176,23 @@
 			path = WhySitUITests;
 			sourceTree = "<group>";
 		};
+		BFA402F91EB276690064DAF8 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				BFA402FF1EB276690064DAF8 /* ResearchKit.framework */,
+				BFA403011EB276690064DAF8 /* ResearchKitTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		BFA604A81EB9059C00143EE5 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				BFA604A91EB9059D00143EE5 /* CoreBluetooth.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,6 +203,7 @@
 				BF675DC01EAFB0AA00FAFF26 /* Sources */,
 				BF675DC11EAFB0AA00FAFF26 /* Frameworks */,
 				BF675DC21EAFB0AA00FAFF26 /* Resources */,
+				BF675E031EAFB10200FAFF26 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -193,6 +262,7 @@
 				TargetAttributes = {
 					BF675DC31EAFB0AA00FAFF26 = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = VN85BBX7VG;
 						ProvisioningStyle = Automatic;
 					};
 					BF675DD71EAFB0AB00FAFF26 = {
@@ -218,6 +288,12 @@
 			mainGroup = BF675DBB1EAFB0AA00FAFF26;
 			productRefGroup = BF675DC51EAFB0AA00FAFF26 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = BFA402F91EB276690064DAF8 /* Products */;
+					ProjectRef = BF54AAA81EB122B800475095 /* ResearchKit.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				BF675DC31EAFB0AA00FAFF26 /* WhySit */,
@@ -226,6 +302,23 @@
 			);
 		};
 /* End PBXProject section */
+
+/* Begin PBXReferenceProxy section */
+		BFA402FF1EB276690064DAF8 /* ResearchKit.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ResearchKit.framework;
+			remoteRef = BFA402FE1EB276690064DAF8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		BFA403011EB276690064DAF8 /* ResearchKitTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ResearchKitTests.xctest;
+			remoteRef = BFA403001EB276690064DAF8 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+/* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
 		BF675DC21EAFB0AA00FAFF26 /* Resources */ = {
@@ -260,7 +353,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				BF675DCA1EAFB0AA00FAFF26 /* ViewController.swift in Sources */,
+				BF675E071EAFBE2F00FAFF26 /* ConsentDocument.swift in Sources */,
+				BF675E091EAFBE9B00FAFF26 /* ConsentTask.swift in Sources */,
 				BF675DC81EAFB0AA00FAFF26 /* AppDelegate.swift in Sources */,
+				BF675E051EAFB1F700FAFF26 /* SurveyTask.swift in Sources */,
+				BF52F3441EB0144A0037A787 /* ResultParser.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -410,11 +507,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VN85BBX7VG;
 				INFOPLIST_FILE = WhySit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NU.WhySit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -422,11 +521,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = VN85BBX7VG;
 				INFOPLIST_FILE = WhySit/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = NU.WhySit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -503,6 +604,7 @@
 				BF675DEE1EAFB0AB00FAFF26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF675DEF1EAFB0AB00FAFF26 /* Build configuration list for PBXNativeTarget "WhySitTests" */ = {
 			isa = XCConfigurationList;
@@ -511,6 +613,7 @@
 				BF675DF11EAFB0AB00FAFF26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		BF675DF21EAFB0AB00FAFF26 /* Build configuration list for PBXNativeTarget "WhySitUITests" */ = {
 			isa = XCConfigurationList;
@@ -519,6 +622,7 @@
 				BF675DF41EAFB0AB00FAFF26 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
